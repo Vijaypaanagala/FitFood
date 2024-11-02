@@ -1,0 +1,67 @@
+/* UpdateFood.css */
+
+/* Container for the form */
+.update-food-container {
+  max-width: 400px; /* Max width for the card */
+  margin: 30px auto; /* Center the card horizontally */
+  padding: 20px; /* Padding inside the card */
+  background-color: white; /* Card background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-top: 80px;
+}
+
+/* Form input styles */
+.update-food-container input {
+  width: 100%; /* Full width of the input */
+  padding: 10px; /* Padding for inputs */
+  margin: 10px 0; /* Margin between inputs */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+/* Input focus effect */
+.update-food-container input:focus {
+  border-color: #5aa91f; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Submit button styles */
+.update-food-container button {
+  width: 100%; /* Full width for button */
+  padding: 10px; /* Padding for button */
+  margin-top: 10px; /* Margin above button */
+  background-color: #5aa91f; /* Custom green background */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+/* Button hover effect */
+.update-food-container button:hover {
+  background-color: #4e961c; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+/* Optional: Active state for button */
+.update-food-container button:active {
+  transform: translateY(0); /* Reset on click */
+}
+
+/* Error message styles */
+.update-error-message {
+  color: #dc3545; /* Red color for error messages */
+  margin-top: 10px; /* Margin above the error message */
+  margin-bottom: 5px; /* Margin below the error message */
+}
+
+.update-food-title {
+  margin-top: 20px; /* Space above title */
+  font-size: 1.5em; /* Title font size */
+  color: #333; /* Title color */
+}

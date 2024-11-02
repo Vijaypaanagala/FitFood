@@ -1,0 +1,117 @@
+/* Userhome.css */
+
+/* Overall body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Main heading styles */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+
+}
+
+/* Container for restaurants */
+.restaurant-container {
+  margin-bottom: 30px;
+}
+
+/* Container for food items */
+.food-items-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: flex-start; /* Align items to the left */
+  
+}
+
+/* Each food item styling */
+.food-item {
+  width: calc(20% - 20px); /* Adjust to fit five items per row */
+  margin: 10px; /* Space between items */
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent overflow */
+  padding-bottom: 15px;
+
+}
+
+/* Food item image styling */
+.food-item img {
+  width: 100%;
+  height: 180px; /* Increased height */
+  object-fit: cover; /* Cover the area */
+}
+
+/* Details container */
+.food-details {
+  padding-right: 20px; /* Padding around details */
+
+  margin-left: 15px;
+  /* Left align the text */
+}
+
+/* Title styles for food items */
+.food-details h4{
+  font-size: 20px; /* Increased font size */
+  margin: 0 0 10px; /* Space below title */
+  color: #333;
+  margin-left:10px ;
+  margin-top: 5px;
+
+}
+
+/* Paragraph styles for details */
+.food-details p {
+  font-size: 14px; /* Font size for details */
+  margin: 0 0 10px; /* Space between paragraphs */
+  color: #666; /* Gray color for details */
+  margin-left: 10px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* View button */
+button.viewed {
+  background-color: #3498db; /* Blue */
+  color: white;
+}
+
+/* Add button */
+button.add {
+  background-color: #2ecc71; /* Green */
+  color: white;
+}
+
+/* Button hover effects */
+button:hover {
+  opacity: 0.9; /* Slightly transparent on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .food-item {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .food-item {
+    width: 100%; /* Full width on mobile */
+  }
+}

@@ -1,0 +1,73 @@
+/* General Styles */
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #e9ecef; /* Light gray background for contrast */
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 80px;
+}
+
+/* Card Styles */
+.register-card {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 30px;
+  width: 400px; /* Fixed width for the card */
+  text-align: center; /* Centered text */
+}
+
+/* Title Styles */
+.register-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #343a40; /* Dark gray color for the title */
+}
+
+/* Input Styles */
+.register-input {
+  width: 100%; /* Full width for input fields */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 5px;
+  font-size: 16px; /* Larger font size */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for focus effect */
+}
+
+.register-input:focus {
+  border-color: #5aa91f; /* Primary border color on focus */
+  box-shadow: 0 0 5px rgba(90, 169, 31, 0.5); /* Soft shadow on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+.register-button {
+  width: 100%; /* Full width for the button */
+  padding: 12px;
+  background-color: #5aa91f; /* Primary button color */
+  color: #ffffff; /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background color and transform */
+}
+
+.register-button:hover {
+  background-color: #4b9b16; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.register-button:active {
+  transform: translateY(0); /* Reset lift effect on click */
+}
+
+/* Error Message Styles */
+.register-error {
+  color: #dc3545; /* Red color for error messages */
+  margin-top: 10px;
+  margin-bottom: 5px;
+}

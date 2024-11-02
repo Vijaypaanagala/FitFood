@@ -1,51 +1,62 @@
-import React from 'react'
-import {Link,useNavigate} from 'react-router-dom'
-import  { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Hometwo from './Hometwo';
 
 function Home() {
   const [datas, setData] = useState([]);
   const [load, setLoad] = useState(false);
-  const [user ,setuser]= useState(null)
-  const restaurantName =localStorage.getItem('resturantName')
-  const navigate=useNavigate()
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    setLoad(true);
-    const isuser=localStorage.getItem('userEmail')
-  if(isuser){
-    setuser(isuser)
-  }
-    fetch(`http://localhost:3000/foods/${restaurantName}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data); // Log the data to inspect
-        setData(data); // Store the fetched data in the state
-        setLoad(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoad(false);
-      });
+    const storedUser = localStorage.getItem('userEmail');
+    if (storedUser) {
+      setUser(storedUser);
+    }
   }, []);
 
+  useEffect(() => {
+    if (user) {
+      setLoad(true);
+      fetch(`http://localhost:3000/foods/${user}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (Array.isArray(data)) {
+            setData(data);
+          } else {
+            setData([]); // Ensures it's an array
+          }
+          setLoad(false);
+        })
+        .catch((err) => {
+          console.error(err);
+          setLoad(false);
+        });
+    }
+  }, [user]);
+
   return (
-    <>
-    
-<div>
+    <div>
+        <h2 className='homeh1' style={{marginTop:'20px'}}>Your Food Items</h2>
       {load ? (
-        <h1>Loading....</h1>
+        <center> <p style={{marginTop:"200px"}}>Loading....</p></center>
+       
+      ) : !user ? (
+        <div>No user available</div>
+      ) : datas.length === 0 ? (
+        <div>No items yet</div>
       ) : (
-        !user ? (
-          <div>no items yet</div>
-          
-        ):(
-          <Hometwo datas={datas} />
-        )
+        <>
+      
+        <Hometwo datas={datas} />
+        </>
         
       )}
+      
+
     </div>
-</>
-  )
+
+  );
 }
 
-export default Home
+export default Home;

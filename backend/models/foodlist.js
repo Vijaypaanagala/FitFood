@@ -8,9 +8,14 @@ const foodSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  protien: {
+  image:{
+    type:Buffer,
+    contentType:String,
+    
+  },
+  protein: {
     type: String, 
-    required: true
+    
   },
   cal: {
     type: String,
