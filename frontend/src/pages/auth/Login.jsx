@@ -1,44 +1,51 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'
-
+import { useNavigate } from 'react-router-dom';
+import '../../styles/Login.css'; // Import the CSS file
 
 function Login() {
- const  [email,setemail]=useState("")
-  const [password,setpass]=useState("")
-  const [resturant, setresturant] = useState("");
-  const navigate= useNavigate()
-  const rehandle=async ()=>{
-    const data={
+  const [email, setemail] = useState("");
+  const [password, setpass] = useState("");
+  const [error, setError] = useState(""); // State for error messages
+  const navigate = useNavigate();
+
+  const rehandle = async () => {
+    const data = {
       email,
       password
-    }
+    };
     try {
       const response = await axios.post('http://localhost:3000/user/login', data);
-      localStorage.setItem('userEmail',email)
-      localStorage.setItem('resturantName',resturant)
-      navigate('/')
+      localStorage.setItem('userEmail', email);
+      navigate('/');
       window.location.reload();
     } catch (err) {
-      alert(err.response?.data?.error || 'An error occurred');
+      setError(err.response?.data?.error || 'An error occurred'); // Update error state
     }
+  };
 
-  }
   return (
-    
-      <div>
-      <input 
-        type="text" 
-        placeholder='resurant name' 
-        onChange={(e) => setresturant(e.target.value)} 
-      /> 
-      <br />
-      <input type="text" placeholder='email' onChange={(e)=>setemail(e.target.value)} /> <br />
-      <input type="text" placeholder='password' onChange={(e)=>setpass(e.target.value)} /> <br />
-      <button onClick={rehandle}>Login</button>
+    <div className="login-container">
+      <div className="login-card">
+        <h2 className="login-title">Login</h2>
+        <input
+          type="text"
+          className="login-input"
+          placeholder='Email'
+          onChange={(e) => setemail(e.target.value)}
+        />
+        <input
+          type="password"
+          className="login-input"
+          placeholder='Password'
+          onChange={(e) => setpass(e.target.value)}
+        />
+          {error && <div className="login-error">{error}</div>}
+        <button className="login-button" onClick={rehandle}>Login</button>
+       {/* Display error message */}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

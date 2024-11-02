@@ -1,0 +1,9 @@
+/* Hometwo.css */
+
+.res-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4 columns */
+  gap: 20px; /* Space between items */
+  padding: 20px;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,77 @@
+/* CartedItems.css */
+
+/* Container for the cart items */
+.cart-container {
+  max-width: 800px; /* Max width for the cart */
+  margin: 30px auto; /* Center the cart horizontally */
+  padding: 20px; /* Padding inside the cart */
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Individual cart item styles */
+.cart-item {
+  display: flex; /* Flexbox for layout */
+  align-items: center; /* Center items vertically */
+  border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  padding: 15px 0; /* Padding for items */
+}
+
+.cart-item:last-child {
+  border-bottom: none; /* Remove border for last item */
+}
+
+/* Food image styles */
+.cart-item img {
+  border-radius: 8px; /* Rounded corners for images */
+  margin-right: 15px; /* Space between image and text */
+}
+
+/* Food title styles */
+.cart-item h4 {
+  font-size: 1.2em; /* Title font size */
+  margin: 0; /* Remove margin */
+  color: #333; /* Dark gray color */
+}
+
+/* Food detail styles */
+.cart-item p {
+  margin: 5px 0; /* Margin for paragraph elements */
+  color: #666; /* Gray color for details */
+}
+
+/* Button styles */
+.cart-item button {
+  padding: 8px 12px; /* Padding for buttons */
+  background-color: #ff4d4d; /* Red background for remove button */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  margin-left: auto; /* Align button to the right */
+}
+
+/* Button hover effect */
+.cart-item button:hover {
+  background-color: #e63939;
+  color:white /* Darker shade on hover */
+}
+
+/* Total amount styles */
+.cart-total {
+  margin-top: 20px; /* Margin above total amount */
+  font-size: 1.5em; /* Font size for total */
+  color: #333; /* Dark gray color */
+  font-weight: bold; /* Bold text */
+  text-align: right; /* Align text to the right */
+}
+
+/* Loading and empty state styles */
+.cart-empty,
+.cart-loading {
+  text-align: center; /* Center text */
+  margin-top: 20px; /* Margin above text */
+  color: #666; /* Gray color for messages */
+}

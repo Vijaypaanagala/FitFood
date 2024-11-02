@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import avatar from '../assets/empty image.webp';
+import '../styles/View.css';
 
 function GetFood() {
-  const [food, setFood] = useState(null); // Initialize with null to differentiate from empty object
-  const [loading, setLoading] = useState(true); // Initialize with true
-  const [error, setError] = useState(null); // State to hold error messages
+  const [food, setFood] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,13 +23,13 @@ function GetFood() {
         setLoading(false);
       })
       .catch((err) => {
-        setError(err.message); // Store the error message
+        setError(err.message);
         setLoading(false);
       });
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div><center style={{marginTop:'250px'}}>Loading...</center></div>;
   }
 
   if (error) {
@@ -35,15 +37,18 @@ function GetFood() {
   }
 
   return (
-    <div>
+    <div className="view-card-container">
       {food ? (
-        <div>
-          <h1>{food.title}</h1>
-          <p>Food_id: {food._id}</p>
-          <p>Protien: {food.protien}</p>
-          <p>Calories: {food.cal}</p>
-          <p>Price: {food.price} /-</p>
-          
+        <div className="view-card">
+          <h1 className="view-card-title">{food.title}</h1>
+          <img
+            src={food.image ? `data:image/jpeg;base64,${food.image}` : avatar}
+            alt={food.title}
+            className="view-card-image"
+          />
+          <p className="view-card-details">Protein: {food.protein}</p>
+          <p className="view-card-details">Calories: {food.cal}</p>
+          <p className="view-card-price">Price: {food.price} /-</p>
         </div>
       ) : (
         <div>Food not found</div>

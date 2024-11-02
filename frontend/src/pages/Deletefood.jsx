@@ -9,14 +9,14 @@ function Deletefood() {
   const handleDel=()=>{
     axios.delete(`http://localhost:3000/foods/fooditem/${id}`).then(
       console.log('sucess del'),
-      navigate('/'),
+      navigate('/restaurant'),
       window.location.reload()
     ).catch((err)=>{
       console.log(err)
     })
   }
   const canc=()=>{
-    navigate('/')
+    navigate('/restaurant')
   }
   return (
     <div>
