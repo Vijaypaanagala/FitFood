@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AddFood.css';
 
-function addfood() {
+function Add() {
   const [title, setTitle] = useState('');
   const [cal, setCal] = useState('');
   const [protein, setProtein] = useState('');
@@ -75,21 +75,21 @@ function addfood() {
             value={title}
           />
           <label
-  htmlFor="profileImage"
-  className="register-label"
-  style={{
-    float: 'left',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: '#555', // Subtle gray color
-    marginBottom: '-5px',
-    marginTop: '5px',
-    display: 'block', // Ensures it stays above the input
-    padding: '5px 0',
-  }}
->
-  Upload your item image
-</label>
+            htmlFor="profileImage"
+            className="register-label"
+            style={{
+              float: 'left',
+              fontSize: '16px',
+              fontWeight: 'bold',
+              color: '#555', // Subtle gray color
+              marginBottom: '-5px',
+              marginTop: '5px',
+              display: 'block', // Ensures it stays above the input
+              padding: '5px 0',
+            }}
+          >
+            Upload your item image
+          </label>
 
           <input
             type="file"
@@ -126,4 +126,4 @@ function addfood() {
   );
 }
 
-export default addfood;
+export default Add;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Homes/Home';
-import Addfood from './pages/addfood';
+import Add from './pages/Add'
 import Updatefood from './pages/updatefood';
 import Deletefood from './pages/deletefood';
 import Getfood from './pages/getfood';
@@ -26,7 +26,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Userhome />} />
-        <Route path="/foods/add" element={<Addfood/>} />
+        <Route path="/foods/add" element={<Add/>} />
         <Route path="/foods/edit/:id" element={<Updatefood />} />
         <Route path="/foods/delete/:id" element={<Deletefood />} />
         <Route path="/foods/details/:id" element={<Getfood />} />
