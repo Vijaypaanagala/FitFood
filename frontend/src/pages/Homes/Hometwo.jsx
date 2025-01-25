@@ -1,6 +1,6 @@
 import React from 'react';
 import Homein from './Homein';
-import '../../styles/Hometwo.css'; // New CSS file for styling Hometwo component
+import '../../styles/HomeTwo.css'; // New CSS file for styling Hometwo component
 
 function Hometwo({ datas }) {
   return (
