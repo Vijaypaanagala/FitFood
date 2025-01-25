@@ -2,9 +2,9 @@ import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Homes/Home';
 import Add from './pages/Add'
-import Updatefood from './pages/updatefood';
-import Deletefood from './pages/deletefood';
-import Getfood from './pages/getfood';
+import Updatefood from './pages/Updatefood';
+import Deletefood from './pages/Updatefood';
+import Getfood from './pages/Getfood';
 import Allfood from './pages/Allfood';
 import UserNavBar from './pages/UserNavBar';
 import Login from './pages/auth/Login';
