@@ -15,7 +15,7 @@ function Login() {
       password
     };
     try {
-      const response = await axios.post('http://localhost:3000/user/login', data);
+      const response = await axios.post('https://fitfood-bi0e.onrender.com/user/login', data);
       localStorage.setItem('userEmail', email);
       navigate('/');
       window.location.reload();

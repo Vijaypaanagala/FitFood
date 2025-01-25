@@ -16,7 +16,7 @@ function Register() {
     };
 
     try {
-      const response = await axios.post('http://localhost:3000/user/register', data);
+      const response = await axios.post('https://fitfood-bi0e.onrender.com/user/register', data);
       console.log(response)
       localStorage.setItem('userEmail', email);
       navigate('/');
