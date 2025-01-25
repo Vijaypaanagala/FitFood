@@ -1,5 +1,3 @@
-/* CartedItems.css */
-
 /* Container for the cart items */
 .cart-container {
   max-width: 800px; /* Max width for the cart */
@@ -13,6 +11,7 @@
 /* Individual cart item styles */
 .cart-item {
   display: flex; /* Flexbox for layout */
+  flex-direction: row; /* Default row direction */
   align-items: center; /* Center items vertically */
   border-bottom: 1px solid #ddd; /* Bottom border for separation */
   padding: 15px 0; /* Padding for items */
@@ -25,7 +24,14 @@
 /* Food image styles */
 .cart-item img {
   border-radius: 8px; /* Rounded corners for images */
+  width: 120px; /* Fixed width for images */
+  height: 100px; /* Fixed height for images */
   margin-right: 15px; /* Space between image and text */
+}
+
+/* Food details container */
+.cart-item div {
+  flex-grow: 1; /* Take available space for details */
 }
 
 /* Food title styles */
@@ -53,10 +59,9 @@
   margin-left: auto; /* Align button to the right */
 }
 
-/* Button hover effect */
 .cart-item button:hover {
-  background-color: #e63939;
-  color:white /* Darker shade on hover */
+  background-color: #e63939; /* Darker shade on hover */
+  color: white; /* Ensure white text remains */
 }
 
 /* Total amount styles */
@@ -74,4 +79,37 @@
   text-align: center; /* Center text */
   margin-top: 20px; /* Margin above text */
   color: #666; /* Gray color for messages */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .cart-item img {
+    width: 100px; /* Reduce image width */
+    height: 80px; /* Reduce image height */
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px; /* Add spacing below image */
+  }
+
+  .cart-item div {
+    width: 100%; /* Take full width for details */
+  }
+
+  .cart-item button {
+    width: 100%; /* Full width for button */
+    margin-left: 0; /* Remove left margin */
+    margin-top: 10px; /* Add spacing above button */
+    padding: 10px; /* Increase padding for better touch targets */
+    font-size: 16px; /* Larger font size for accessibility */
+  }
+
+  .cart-total {
+    font-size: 18px; /* Adjust total font size for mobile */
+    margin-top: 20px; /* Add spacing above total */
+    text-align: center; /* Center-align total amount */
+  }
 }

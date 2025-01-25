@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Hometwo from './Hometwo';
+import ShiningLoader from '../ShiningLoader';
 
 function Home() {
   const [datas, setData] = useState([]);
@@ -39,8 +40,7 @@ function Home() {
     <div>
         <h2 className='homeh1' style={{marginTop:'20px'}}>Your Food Items</h2>
       {load ? (
-        <center> <p style={{marginTop:"200px"}}>Loading....</p></center>
-       
+       <ShiningLoader count={10} height={250}/>
       ) : !user ? (
         <div>No user available</div>
       ) : datas.length === 0 ? (

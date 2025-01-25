@@ -17,6 +17,7 @@ function Register() {
 
     try {
       const response = await axios.post('http://localhost:3000/user/register', data);
+      console.log(response)
       localStorage.setItem('userEmail', email);
       navigate('/');
       window.location.reload();

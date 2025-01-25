@@ -74,6 +74,23 @@ function AddFood() {
             onChange={(e) => setTitle(e.target.value)}
             value={title}
           />
+          <label
+  htmlFor="profileImage"
+  className="register-label"
+  style={{
+    float: 'left',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: '#555', // Subtle gray color
+    marginBottom: '-5px',
+    marginTop: '5px',
+    display: 'block', // Ensures it stays above the input
+    padding: '5px 0',
+  }}
+>
+  Upload your item image
+</label>
+
           <input
             type="file"
             accept="image/*"

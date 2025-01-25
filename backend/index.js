@@ -12,10 +12,37 @@ app.use(cors({
 }));
 app.use('/user',res)
 app.use('/foods',foodlists)
-app.get('/',(req,res)=>{
-  res.send(" This is my Mern stack project")
 
-})
+//--------------deployment------------------
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const isProduction = process.argv[2] === 'production'; // Check for production flag
+
+if (isProduction) {
+  // Serve static files from the frontend build directory
+  app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+  // Catch-all route to serve the React frontend
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend/dist', 'index.html'));
+  });
+} else {
+  // Development mode
+  app.get('/', (req, res) => {
+    res.send('API is running...');
+  });
+}
+//------------------deployment----------------------------
+
+
+// app.get('/',(_req,res)=>{
+//   res.send(" This is my Mern stack project")
+
+// })
 
 mongoose.connect(mongoUrl).then(()=>{
   console.log("connect sucsessfully");

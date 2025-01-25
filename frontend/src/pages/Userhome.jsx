@@ -4,6 +4,7 @@ import '../styles/Userhome.css';
 import { Link, useNavigate } from 'react-router-dom';
 import avatar from '../assets/empty image.webp';
 import Footer from './Footer'
+import ShiningLoader from './ShiningLoader';
 
 const Userhome = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -62,12 +63,27 @@ const Userhome = () => {
     <div>
       <h1 >Restaurants and their Food Items</h1>
       {restaurants.length === 0 ? (
-        <center><p style={{marginTop:'20px'}}>Loading...</p></center>
+        <ShiningLoader count={10} height={250}/>
         
       ) : (
         restaurants.map((restaurant) => (
           <div key={restaurant._id} className="restaurant-container">
-            <h3>{restaurant.name.split('@')[0]}</h3>
+            {restaurant.fooditems.length>0?( <h3
+  style={{
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: '#333',
+    margin: '10px 0',
+    textTransform: 'capitalize',
+    fontFamily: "'Roboto', sans-serif",
+    letterSpacing: '1px',
+    marginLeft:'10px'
+  }}
+>
+  From {restaurant.name.split('@')[0]}
+</h3>
+):(<p></p>)}
+           
             <div className="food-items-container">
               {restaurant.fooditems.map((food) => (
                 <div key={food._id} className="food-item">

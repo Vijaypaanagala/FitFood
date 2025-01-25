@@ -27,7 +27,10 @@ function Carteditems() {
         const foodIds = cartResponse.data;
 
         const foodDetailsPromises = foodIds.map(item =>
-          axios.get(`http://localhost:3000/foods/fooditem/${item.foodid}`)
+          
+          axios.get(`http://localhost:3000/foods/fooditem/${item.foodid}`),
+          console.log(foodIds)
+          
         );
 
         const foodDetailsResponses = await Promise.all(foodDetailsPromises);

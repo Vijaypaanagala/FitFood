@@ -1,0 +1,57 @@
+/* Loader container for shimmering boxes */
+.shining-loader-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default: 5 columns */
+  gap: 30px;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+/* Individual shimmering box */
+.loader-box {
+  background: linear-gradient(
+    90deg,
+    #ececec 25%,
+    #f7f7f7 50%,
+    #ececec 75%
+  );
+  background-size: 150% 100%; /* Smaller gradient for subtle animation */
+  border-radius: 8px; /* Rounded corners */
+  animation: shimmer 2s infinite; /* Slower and smoother animation */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Slight shadow for depth */
+}
+
+/* Animation for the shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 150% 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .shining-loader-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .shining-loader-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .shining-loader-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .shining-loader-container {
+    grid-template-columns: 1fr;
+  }
+}
