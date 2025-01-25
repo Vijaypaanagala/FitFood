@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './pages/Homes/Home';
-import Addfood from './pages/addfood';
+import Addfood from './pages/addfood'
 import Updatefood from './pages/updatefood';
 import Deletefood from './pages/deletefood';
 import Getfood from './pages/getfood';

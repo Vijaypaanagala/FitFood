@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../styles/AddFood.css';
 
-function AddFood() {
+function addfood() {
   const [title, setTitle] = useState('');
   const [cal, setCal] = useState('');
   const [protein, setProtein] = useState('');
@@ -126,4 +126,4 @@ function AddFood() {
   );
 }
 
-export default AddFood;
+export default addfood;
