@@ -110,4 +110,4 @@ registerSchema.statics.login = async function (email, password) {
 export const Person = mongoose.model('Person', registerSchema);
 export const Food = mongoose.model('Food', foodSchema);
 export const Restaurant = mongoose.model('Restaurant', restaurantSchema);
-export const carts=mongoose.model('carted',emailcart)
+export const carts=mongoose.model('carted',emailcart);
