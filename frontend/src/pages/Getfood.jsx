@@ -11,7 +11,7 @@ function GetFood() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3000/foods/fooditem/${id}`)
+    fetch(`https://fitfood-bi0e.onrender.com/foods/fooditem/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error('Network response was not ok');

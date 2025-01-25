@@ -8,7 +8,7 @@ const app= express();
 import mongoose from "mongoose";
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:5173' 
+  origin: 'https://fitfood-bi0e.onrender.com' 
 }));
 app.use('/user',res)
 app.use('/foods',foodlists)

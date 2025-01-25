@@ -47,7 +47,7 @@ function Add() {
     setLoading(true); // Start loading
 
     try {
-      await axios.post('http://localhost:3000/foods', formData, {
+      await axios.post('https://fitfood-bi0e.onrender.com/foods', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

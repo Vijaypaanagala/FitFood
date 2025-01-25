@@ -21,7 +21,7 @@ const Userhome = () => {
     const fetchCartItems = async () => {
       if (email) {
         try {
-          const response = await axios.get(`http://localhost:3000/foods/getcart/${email}`);
+          const response = await axios.get(`https://fitfood-bi0e.onrender.com/foods/getcart/${email}`);
           const existingCartIds = response.data.map((item) => item.foodid);
           setCartItems(existingCartIds);
         } catch (err) {
@@ -35,7 +35,7 @@ const Userhome = () => {
   const handleAddToCart = (id) => {
     if (email) {
       const data = { email, id };
-      axios.post('http://localhost:3000/foods/addcart', data)
+      axios.post('https://fitfood-bi0e.onrender.com/foods/addcart', data)
         .then(() => {
           setCartItems([...cartItems, id]);
         })
@@ -50,7 +50,7 @@ const Userhome = () => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/foods/all-restaurants');
+        const response = await axios.get('https://fitfood-bi0e.onrender.com/foods/all-restaurants');
         setRestaurants(response.data);
       } catch (error) {
         console.error('Error fetching restaurant data:', error);

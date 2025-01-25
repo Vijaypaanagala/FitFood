@@ -12,7 +12,7 @@ function Updatefood() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/foods/fooditem/${id}`).then((res) => {
+    axios.get(`https://fitfood-bi0e.onrender.com/foods/fooditem/${id}`).then((res) => {
       console.log(res);
       setTitle(res.data.title);
       setProtein(res.data.protein);
@@ -30,7 +30,7 @@ function Updatefood() {
       cal,
       price
     };
-    axios.put(`http://localhost:3000/foods/fooditem/${id}`, newData).then(() => {
+    axios.put(`https://fitfood-bi0e.onrender.com/foods/fooditem/${id}`, newData).then(() => {
       console.log("success");
       navigate('/restaurant');
       window.location.reload();

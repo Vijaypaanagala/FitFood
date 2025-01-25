@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     if (user) {
       setLoad(true);
-      fetch(`http://localhost:3000/foods/${user}`)
+      fetch(`https://fitfood-bi0e.onrender.com/foods/${user}`)
         .then((res) => res.json())
         .then((data) => {
           if (Array.isArray(data)) {

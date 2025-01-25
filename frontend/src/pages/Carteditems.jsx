@@ -12,7 +12,7 @@ function Carteditems() {
 
   const handleDelToCart = async (foodid) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/foods/deletecartitem/${foodid}`);
+      const response = await axios.delete(`https://fitfood-bi0e.onrender.com/foods/deletecartitem/${foodid}`);
       window.location.reload();
       console.log(response.data); 
     } catch (error) {
@@ -23,12 +23,12 @@ function Carteditems() {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const cartResponse = await axios.get(`http://localhost:3000/foods/getcart/${email}`);
+        const cartResponse = await axios.get(`https://fitfood-bi0e.onrender.com/foods/getcart/${email}`);
         const foodIds = cartResponse.data;
 
         const foodDetailsPromises = foodIds.map(item =>
           
-          axios.get(`http://localhost:3000/foods/fooditem/${item.foodid}`),
+          axios.get(`https://fitfood-bi0e.onrender.com/foods/fooditem/${item.foodid}`),
           console.log(foodIds)
           
         );

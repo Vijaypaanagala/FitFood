@@ -7,7 +7,7 @@ function Deletefood() {
   const {id}=useParams();
   const navigate=useNavigate()
   const handleDel=()=>{
-    axios.delete(`http://localhost:3000/foods/fooditem/${id}`).then(
+    axios.delete(`https://fitfood-bi0e.onrender.com/foods/fooditem/${id}`).then(
       console.log('sucess del'),
       navigate('/restaurant'),
       window.location.reload()
