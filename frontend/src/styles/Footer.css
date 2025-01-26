@@ -1,0 +1,6 @@
+.custom-footer-container {
+  max-width: 1450px; /* Increase the width */
+  margin: 0 auto; /* Center the footer */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

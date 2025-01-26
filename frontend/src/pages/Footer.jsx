@@ -1,8 +1,8 @@
 import React from 'react';
-
+import '../styles/Footer.css'
 export default function Footer() {
   return (
-    <div className="container my-5">
+    <div className="custom-footer-container my-5">
       <footer className="text-center text-lg-start text-dark" style={{ backgroundColor: '#ECEFF1' }}>
         
         <section className="d-flex justify-content-between p-4 text-white" style={{ backgroundColor: ' #5aa91f' }}>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <h6 className="text-uppercase fw-bold">Company name</h6>
                 <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{ width: '60px', backgroundColor: '#7c4dff', height: '2px' }} />
                 <p>
-                FitFood is a marketplace where users can buy and sell protein-rich, nutritious foods to support a healthy lifestyle. Our platform connects fitness enthusiasts with quality food options for fueling their wellness goals.
+                  FitFood is a marketplace where users can buy and sell protein-rich, nutritious foods to support a healthy lifestyle. Our platform connects fitness enthusiasts with quality food options for fueling their wellness goals.
                 </p>
               </div>
               

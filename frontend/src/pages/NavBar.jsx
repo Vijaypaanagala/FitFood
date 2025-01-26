@@ -20,7 +20,7 @@ function NavBar({ setCustomView }) {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <a className="navbar-brand" >FitFood</a>
+    <a className="navbar-brand" >FitFoods</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -29,9 +29,11 @@ function NavBar({ setCustomView }) {
         <li className="nav-item">
           <Link  to='/restaurant' className="nav-link active" aria-current="page" >Home</Link>
         </li>
-       
         <li className="nav-item">
-          <Link  to='/foods/add' className="nav-link" >Add Food</Link>
+          <Link  to='/foods/add' className="nav-link" >Add Meal</Link>
+        </li>
+        <li className="nav-item">
+          <Link  to='/restaurant/youritems' className="nav-link" >Your Food Items</Link>
         </li>
         <li className="nav-item">
           <Link to='/' className="nav-link" >become customer</Link>
@@ -42,7 +44,7 @@ function NavBar({ setCustomView }) {
           <span className="nav-link" >{userEmail}</span>
         </li>
         <li className="nav-item">
-          <button  onClick={logouthandle} className="nav-link" >Logout</button>
+          <button    onClick={logouthandle} className="nav-link" >Logout</button>
         </li>
           </>
         ):(

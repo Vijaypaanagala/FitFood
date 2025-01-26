@@ -21,7 +21,7 @@ function UserNavBar() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand">FitFood</a>
+        <a className="navbar-brand">FitFoods</a>
         <button
           className="navbar-toggler"
           type="button"
@@ -41,8 +41,13 @@ function UserNavBar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/items" className="nav-link">
+                Explore
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/restaurant" className="nav-link">
-                Add Restaurant
+                Add your Food
               </Link>
             </li>
             <li className="nav-item">

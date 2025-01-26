@@ -61,7 +61,8 @@ const Userhome = () => {
 
   return (
     <div>
-      <h1 >Restaurants and their Food Items</h1>
+       <center> <h3 style={{marginTop:'20px'}}>Healthy Food Items</h3></center>
+
       {restaurants.length === 0 ? (
         <ShiningLoader count={10} height={250}/>
         

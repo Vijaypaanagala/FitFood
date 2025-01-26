@@ -12,6 +12,8 @@ import Register from './pages/auth/Register';
 import Userhome from './pages/Userhome';
 import Carteditems from './pages/Carteditems';
 import NavBar from './pages/NavBar';
+import CustomerInterface from './pages/CustomerInterface';
+import ClientInterface from './pages/ClientInterface';
 
 
 function App() {
@@ -25,16 +27,18 @@ function App() {
       {isRestaurantPath ? <NavBar /> : <UserNavBar />}
 
       <Routes>
-        <Route path="/" element={<Userhome />} />
+        <Route path="/items" element={<Userhome />} />
+        <Route path="/" element={<CustomerInterface />} />
         <Route path="/foods/add" element={<Add/>} />
         <Route path="/foods/edit/:id" element={<Updatefood />} />
         <Route path="/foods/delete/:id" element={<Deletefood />} />
         <Route path="/foods/details/:id" element={<Getfood />} />
-        <Route path="/foods" element={<Allfood />} />
+        {/* <Route path="/foods" element={<Allfood />} /> */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/cart/:email" element={<Carteditems />} />
-        <Route path="/restaurant" element={<Home />} />
+        <Route path="/restaurant/youritems" element={<Home />} />
+        <Route path="/restaurant" element={<ClientInterface />} />
       </Routes>
     </>
   );
