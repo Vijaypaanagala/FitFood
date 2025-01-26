@@ -6,8 +6,8 @@ export default function Footer() {
       <footer className="text-center text-lg-start text-dark" style={{ backgroundColor: '#ECEFF1' }}>
         
         <section className="d-flex justify-content-between p-4 text-white" style={{ backgroundColor: ' #5aa91f' }}>
-          <div className="me-5">
-            <span>Get connected with us on social networks:</span>
+          <div className="me-10">
+            <span>Let's Connect with Me </span>
           </div>
           <div>
             <a href="https://facebook.com" className="text-white me-4" target="_blank" rel="noopener noreferrer">
